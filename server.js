@@ -11,8 +11,12 @@ app.listen(port, () => {
 	console.log(`Example app listening on port ${port}`)
 });
 
-app.get('/todos/', ( request, response ) => {
-	response.json({toDos: { id: "test", name: "example"}, {id: "Pokemon", name: "Snorlax" }});
+app.get('/api/todos', ( request, response ) => {
+	response.json([
+		{id: "test", name: "example"},
+		{id: "Pokemon", name: "Snorlax" },
+		{id: "Cat", name: "Feed me!" },
+	]);
 });
 
 
